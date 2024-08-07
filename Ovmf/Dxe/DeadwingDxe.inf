@@ -1,0 +1,56 @@
+## @file
+# Configuration file for building DXE driver via EDK2 build system
+##
+
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = DeadwingDxe
+  MODULE_UNI_FILE                = DeadwingDxe.uni
+  FILE_GUID                      = f74159d1-c2e8-4201-b1bf-56d7aeafa243
+  MODULE_TYPE                    = DXE_RUNTIME_DRIVER
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = UefiMain
+
+#
+# The following information is for reference only and not required by the build tools.
+#
+#  VALID_ARCHITECTURES           = X64
+#
+
+[Sources]
+  Conf.h
+  Defs.h
+  Globals.h
+  Utils.h
+  Utils.c
+  Relocations.h
+  Relocations.c
+  Serial.h
+  Serial.c
+  DxeMain.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+
+[LibraryClasses]
+  BaseLib
+  UefiLib
+  IoLib
+  UefiRuntimeServicesTableLib
+  UefiBootServicesTableLib
+  UefiDriverEntryPoint
+
+[Guids]
+  gEfiEventBeforeExitBootServicesGuid
+  gEfiEventVirtualAddressChangeGuid
+
+[Protocols]
+  gEfiLoadedImageProtocolGuid
+  gEfiMmCommunication2ProtocolGuid
+  
+[Depex]
+  TRUE
+
+[UserExtensions.TianoCore."ExtraFiles"]
+  DeadwingDxeExtra.uni
+  

@@ -1,0 +1,7 @@
+// /** @file
+// Deadwing DXE driver
+// **/
+
+#string STR_MODULE_ABSTRACT             #language en-US "Deadwing DXE driver"
+
+#string STR_MODULE_DESCRIPTION          #language en-US "Auxiliary DXE driver for the main SMM driver"

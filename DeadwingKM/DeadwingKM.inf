@@ -1,0 +1,77 @@
+;
+; DeadwingKM.inf
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=System ; TODO: specify appropriate Class
+ClassGuid={4d36e97d-e325-11ce-bfc1-08002be10318} ; TODO: specify appropriate ClassGuid
+Provider=%ManufacturerName%
+CatalogFile=DeadwingKM.cat
+DriverVer= ; TODO: set DriverVer in stampinf property pages
+PnpLockdown=1
+
+[DestinationDirs]
+DefaultDestDir = 12
+DeadwingKM_Device_CoInstaller_CopyFiles = 11
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+DeadwingKM.sys  = 1,,
+WdfCoInstaller$KMDFCOINSTALLERVERSION$.dll=1 ; make sure the number matches with SourceDisksNames
+
+;*****************************************
+; Install Section
+;*****************************************
+
+[Manufacturer]
+%ManufacturerName%=Standard,NT$ARCH$
+
+[Standard.NT$ARCH$]
+%DeadwingKM.DeviceDesc%=DeadwingKM_Device, Root\DeadwingKM ; TODO: edit hw-id
+
+[DeadwingKM_Device.NT]
+CopyFiles=Drivers_Dir
+
+[Drivers_Dir]
+DeadwingKM.sys
+
+;-------------- Service installation
+[DeadwingKM_Device.NT.Services]
+AddService = DeadwingKM,%SPSVCINST_ASSOCSERVICE%, DeadwingKM_Service_Inst
+
+; -------------- DeadwingKM driver install sections
+[DeadwingKM_Service_Inst]
+DisplayName    = %DeadwingKM.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\DeadwingKM.sys
+
+;
+;--- DeadwingKM_Device Coinstaller installation ------
+;
+
+[DeadwingKM_Device.NT.CoInstallers]
+AddReg=DeadwingKM_Device_CoInstaller_AddReg
+CopyFiles=DeadwingKM_Device_CoInstaller_CopyFiles
+
+[DeadwingKM_Device_CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "WdfCoInstaller$KMDFCOINSTALLERVERSION$.dll,WdfCoInstaller"
+
+[DeadwingKM_Device_CoInstaller_CopyFiles]
+WdfCoInstaller$KMDFCOINSTALLERVERSION$.dll
+
+[DeadwingKM_Device.NT.Wdf]
+KmdfService =  DeadwingKM, DeadwingKM_wdfsect
+[DeadwingKM_wdfsect]
+KmdfLibraryVersion = $KMDFVERSION$
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+ManufacturerName="<Your manufacturer name>" ;TODO: Replace with your manufacturer name
+DiskName = "DeadwingKM Installation Disk"
+DeadwingKM.DeviceDesc = "DeadwingKM Device"
+DeadwingKM.SVCDESC = "DeadwingKM Service"

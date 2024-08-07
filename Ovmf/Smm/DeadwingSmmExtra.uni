@@ -1,0 +1,7 @@
+// /** @file
+// DeadwingSmm Localized Strings and Content
+// **/
+
+#string STR_PROPERTIES_MODULE_NAME
+#language en-US
+"Deadwing SMM driver"

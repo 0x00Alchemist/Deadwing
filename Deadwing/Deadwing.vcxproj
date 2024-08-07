@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Commands.c" />
+    <ClCompile Include="Memory.c" />
+    <ClCompile Include="Nt.c" />
+    <ClCompile Include="Relocations.c" />
+    <ClCompile Include="Serial.c" />
+    <ClCompile Include="SmmMain.c" />
+    <ClCompile Include="Smi.c" />
+    <ClCompile Include="Utils.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Commands.h" />
+    <ClInclude Include="Conf.h" />
+    <ClInclude Include="Defs.h" />
+    <ClInclude Include="Globals.h" />
+    <ClInclude Include="Memory.h" />
+    <ClInclude Include="Nt.h" />
+    <ClInclude Include="PML4.h" />
+    <ClInclude Include="Relocations.h" />
+    <ClInclude Include="Serial.h" />
+    <ClInclude Include="Smi.h" />
+    <ClInclude Include="Utils.h" />
+    <ClInclude Include="VisualUefi.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{DF325AB7-67A6-473E-93FF-16955AFBC063}</ProjectGuid>
+    <ProjectName>Deadwing</ProjectName>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\Deadwing.default.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(SolutionDir)\Deadwing.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(SolutionDir)..\..\EFI\edk2\MdePkg\Include;$(SolutionDir)..\..\EFI\edk2\MdePkg\Include\X64;$(SolutionDir)..\..\EFI\edk2\CryptoPkg\Include;$(SolutionDir)..\..\EFI\edk2\EmulatorPkg\Include;$(SolutionDir)..\..\EFI\edk2\MdeModulePkg\Include</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <Link>
+      <AdditionalDependencies>UefiDriverEntryPoint.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem Condition="'$(Configuration)|$(Platform)'=='Release|x64'">EFI Boot Service Driver</SubSystem>
+    </Link>
+    <ClCompile>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Level3</WarningLevel>
+    </ClCompile>
+    <ClCompile>
+      <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</TreatWarningAsError>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> $(SolutionDir)..\..\EFI\EDK-II\BaseLib\vshacks.h</ForcedIncludeFiles>
+      <IntrinsicFunctions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</IntrinsicFunctions>
+      <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Disabled</InlineFunctionExpansion>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Disabled</Optimization>
+    </ClCompile>
+  </ItemDefinitionGroup>
+</Project>

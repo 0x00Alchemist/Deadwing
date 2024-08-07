@@ -1,0 +1,7 @@
+// /** @file
+// Deadwing SMM driver
+// **/
+
+#string STR_MODULE_ABSTRACT             #language en-US "Deadwing SMM driver"
+
+#string STR_MODULE_DESCRIPTION          #language en-US "This SMM driver performs communication between OS runtime and SMM by SW SMI handler"

@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source">
+      <UniqueIdentifier>{92e6f409-ec6d-4ef9-b523-fc43c00a8bb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\SMI">
+      <UniqueIdentifier>{8c7442a1-4d68-4c7f-9a0b-66d067bc1438}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{73984a8a-72c4-4a8d-b14b-accac3375d52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\SMI">
+      <UniqueIdentifier>{913e2a49-83bc-4f79-b86c-a5c9eb5e86d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Memory">
+      <UniqueIdentifier>{f67e9cd2-0a9e-4eab-b3bf-7640bc5f8005}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Memory">
+      <UniqueIdentifier>{6c6caff5-9166-4fbe-9fa0-424c499f0d89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Misc">
+      <UniqueIdentifier>{af7ef6ef-07a5-4e9f-81be-1a71dbe1cac7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Misc">
+      <UniqueIdentifier>{5c36a885-975a-45d0-a1e6-52323e590463}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Commands">
+      <UniqueIdentifier>{97004e7b-fc3a-47e1-bbc4-79b68c6a1bac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Commands">
+      <UniqueIdentifier>{fc14449c-5b7a-41ea-8da4-92c4e4bb9650}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="SmmMain.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Smi.c">
+      <Filter>Source\SMI</Filter>
+    </ClCompile>
+    <ClCompile Include="Memory.c">
+      <Filter>Source\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="Serial.c">
+      <Filter>Source\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="Relocations.c">
+      <Filter>Source\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.c">
+      <Filter>Source\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="Commands.c">
+      <Filter>Source\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Nt.c">
+      <Filter>Source\Misc</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Globals.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Smi.h">
+      <Filter>Headers\SMI</Filter>
+    </ClInclude>
+    <ClInclude Include="Defs.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Memory.h">
+      <Filter>Headers\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="PML4.h">
+      <Filter>Headers\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="VisualUefi.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Serial.h">
+      <Filter>Headers\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>Headers\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="Relocations.h">
+      <Filter>Headers\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="Conf.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Commands.h">
+      <Filter>Headers\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Nt.h">
+      <Filter>Headers\Misc</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

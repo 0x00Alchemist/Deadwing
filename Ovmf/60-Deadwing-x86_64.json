@@ -1,0 +1,34 @@
+{
+    "description": "Firmware with Deadwing SMM driver",
+    "interface-types": [
+        "uefi"
+    ],
+    "mapping": {
+        "device": "flash",
+        "executable": {
+            "filename": "/path/to/OVMF-CODE.fd",
+            "format": "raw"
+        },
+        "nvram-template": {
+            "filename": "/path/to/OVMF-VARS.fd",
+            "format": "raw"
+        }
+    },
+    "targets": [
+        {
+            "architecture": "x86_64",
+            "machines": [
+                "pc-i440fx-*",
+                "pc-q35-*"
+            ]
+        }
+    ],
+    "features": [
+        "acpi-s3",
+        "amd-sev",
+        "verbose-dynamic"
+    ],
+    "tags": [
+
+    ]
+}

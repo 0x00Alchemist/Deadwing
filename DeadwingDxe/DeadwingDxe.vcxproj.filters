@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source">
+      <UniqueIdentifier>{35d91f23-e18c-4409-8bb1-9743490981dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{9cd597c6-ccee-464e-800e-f2043cb5eb6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Misc">
+      <UniqueIdentifier>{baadbf1d-71e9-400d-ad12-bd40d19358a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Misc">
+      <UniqueIdentifier>{578baa05-6f85-4372-a2ef-c05091591be6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DxeMain.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Relocations.c">
+      <Filter>Source\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.c">
+      <Filter>Source\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="Serial.c">
+      <Filter>Source\Misc</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Globals.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="VisualUefi.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Defs.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Relocations.h">
+      <Filter>Headers\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>Headers\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="Conf.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Serial.h">
+      <Filter>Headers\Misc</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
