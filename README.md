@@ -2,7 +2,7 @@
 
 This repository **demonstrates** the possibility of communication between user mode and SMM to achieve user goals. This project is designed to give an ability to researchers (I guess?) to work with the platform "unconstrained" through inter-mode communication between user mode and SMM (R3 <-> R0 <-> R-2, respectively) with specific SMI data being passed to the handler "directly".
 
-**Deadwing** is currently a simple utility to read and write memory (virtual, physical), memory translation and dump ACPI tables, however, the list will be expanded over time.
+**Deadwing** is currently a simple utility to read and write memory (virtual, physical), memory translation, however, the list will be expanded over time.
 
 Demo: 
 

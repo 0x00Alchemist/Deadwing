@@ -5,7 +5,6 @@
 
 #include <Protocol/LoadedImage.h>
 #include <Protocol/SmmBase2.h>
-#include <Protocol/SmmCpu.h>
 
 #include <IndustryStandard/PeImage.h>
 
@@ -27,8 +26,7 @@ __EfiEntry Entry;
 
 
 /**
- * \brief Initializes SMM context: registers SMI handler, saves SmmCpu
- * protocol
+ * \brief Initializes SMM context: registers SMI handler, allocates remap page
  * 
  * \return EFI_SUCCESS - Context was initialized succesfully
  * \return Other - Unable to register notifiers or allocate page(s)

@@ -15,7 +15,6 @@
 #include "Memory.h"
 #include "Commands.h"
 
-
 #define DEADWING_COMMUNICATE_HEADER_SIZE (OFFSET_OF(EFI_MM_COMMUNICATE_HEADER, Data))
 
 
@@ -122,11 +121,11 @@ EFIAPI
 SmiRegisterHandler(
 	VOID
 ) {
-	EFI_STATUS Status;
-	EFI_HANDLE Handle;
+	STATIC CONST EFI_GUID gDeadwingSmiHandlerGuid = { 0x2BFADA50, 0xAF38, 0x49A1, { 0x85, 0x34, 0x08, 0xF6, 0xAE, 0x1B, 0x4C, 0x96 } };
 
 	// register child SMI handler with custom HandlerType (GUID)
-	Status = gSmst2->SmiHandlerRegister(DeadwingSmiHandler, &gDeadwingSmiHandlerGuid, &Handle);
+	EFI_HANDLE Handle;
+	EFI_STATUS Status = gSmst2->SmiHandlerRegister(DeadwingSmiHandler, &gDeadwingSmiHandlerGuid, &Handle);
 	if(EFI_ERROR(Status))
 		SerialPrint("[ SMM ] Unable to register child SMI handler\r\n");
 
