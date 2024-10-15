@@ -29,31 +29,31 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Defs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Service.h">
+    <ClInclude Include="Service.hpp">
       <Filter>Header Files\Service</Filter>
     </ClInclude>
-    <ClInclude Include="Commands.h">
+    <ClInclude Include="Commands.hpp">
       <Filter>Header Files\Commands</Filter>
     </ClInclude>
-    <ClInclude Include="HexDump.h">
+    <ClInclude Include="HexDump.hpp">
       <Filter>Header Files\Hex Dump</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Service.c">
+    <ClCompile Include="Service.cpp">
       <Filter>Source Files\Service</Filter>
     </ClCompile>
-    <ClCompile Include="Commands.c">
+    <ClCompile Include="Commands.cpp">
       <Filter>Source Files\Commands</Filter>
     </ClCompile>
-    <ClCompile Include="HexDump.c">
+    <ClCompile Include="HexDump.cpp">
       <Filter>Source Files\Hex Dump</Filter>
     </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
   </ItemGroup>
 </Project>
