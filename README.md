@@ -70,10 +70,11 @@ Also, the user can try to patch their firmware to be able to run drivers without
 
 ## Commands list
 
+List of available **DeadwingUM** (**DwUM**) commands.
+
 |   Command   |                      Description                         |
 |    :---:    |                         :---:                            |
 | `ping`      | Pings SMI handler                                        |
-| `cache`     | Caches information about current session                 |
 | `physread`  | Reads from physical address                              |
 | `varead`    | Reads from virtual address                               |
 | `physwrite` | Writes to the physical address                           |

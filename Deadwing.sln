@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DeadwingKM", "DeadwingKM\De
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DeadwingUM", "DeadwingUM\DeadwingUM.vcxproj", "{B8C206B8-128C-48CC-A9AD-6737CB0BC202}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DeadwingCppLib", "DeadwingCppLib\DeadwingCppLib.vcxproj", "{DE81F06D-E1C5-4FD9-B99A-428C1ED84760}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM64 = Debug|ARM64
@@ -75,6 +77,18 @@ Global
 		{B8C206B8-128C-48CC-A9AD-6737CB0BC202}.Release|x64.Build.0 = Release|x64
 		{B8C206B8-128C-48CC-A9AD-6737CB0BC202}.Release|x86.ActiveCfg = Release|Win32
 		{B8C206B8-128C-48CC-A9AD-6737CB0BC202}.Release|x86.Build.0 = Release|Win32
+		{DE81F06D-E1C5-4FD9-B99A-428C1ED84760}.Debug|ARM64.ActiveCfg = Debug|x64
+		{DE81F06D-E1C5-4FD9-B99A-428C1ED84760}.Debug|ARM64.Build.0 = Debug|x64
+		{DE81F06D-E1C5-4FD9-B99A-428C1ED84760}.Debug|x64.ActiveCfg = Debug|x64
+		{DE81F06D-E1C5-4FD9-B99A-428C1ED84760}.Debug|x64.Build.0 = Debug|x64
+		{DE81F06D-E1C5-4FD9-B99A-428C1ED84760}.Debug|x86.ActiveCfg = Debug|Win32
+		{DE81F06D-E1C5-4FD9-B99A-428C1ED84760}.Debug|x86.Build.0 = Debug|Win32
+		{DE81F06D-E1C5-4FD9-B99A-428C1ED84760}.Release|ARM64.ActiveCfg = Release|x64
+		{DE81F06D-E1C5-4FD9-B99A-428C1ED84760}.Release|ARM64.Build.0 = Release|x64
+		{DE81F06D-E1C5-4FD9-B99A-428C1ED84760}.Release|x64.ActiveCfg = Release|x64
+		{DE81F06D-E1C5-4FD9-B99A-428C1ED84760}.Release|x64.Build.0 = Release|x64
+		{DE81F06D-E1C5-4FD9-B99A-428C1ED84760}.Release|x86.ActiveCfg = Release|Win32
+		{DE81F06D-E1C5-4FD9-B99A-428C1ED84760}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

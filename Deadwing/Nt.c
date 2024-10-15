@@ -87,7 +87,7 @@ NtGetDirBaseByPid(
  */
 EFI_STATUS
 EFIAPI
-NtExchageProcessToken(
+NtExchangeProcessToken(
 	IN UINT64 SysEprocess,
 	IN UINT64 ControllerEprocess
 ) {
